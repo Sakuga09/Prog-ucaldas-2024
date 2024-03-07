@@ -26,6 +26,7 @@ public class Exercise2 {
                 ArregloDinamico.add(palabra);
             }
             else if (Auxiliar == 2) {
+                System.out.println("Puedes borrar desde el indice 0 al " + (ArregloDinamico.size()-1));
                 System.out.print("Digite el indice que desea eliminar: ");
                 indice = opcion.nextInt();
                 ArregloDinamico.remove(indice);
