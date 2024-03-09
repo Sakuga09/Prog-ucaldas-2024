@@ -4,8 +4,7 @@ public class Exercise2 {
 
     public static void main(String[] args) {
         ArrayList <String> ArregloDinamico = new ArrayList<>();
-        Scanner opcion = new Scanner(System.in);
-        Scanner cadena = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         int Auxiliar = 0;
         int indice = 0;
@@ -18,17 +17,17 @@ public class Exercise2 {
             System.out.println("* Para dejar de agregar o eliminar digite un número menor a cero.");
 
             System.out.print("Digite su opcion aquí: ");
-            Auxiliar = opcion.nextInt();
+            Auxiliar = sc.nextInt();
 
             if (Auxiliar == 1) {
                 System.out.print("Digite la palabra que desea agregar: ");
-                palabra = cadena.nextLine();
+                palabra = sc.nextLine();
                 ArregloDinamico.add(palabra);
             }
             else if (Auxiliar == 2) {
                 System.out.println("Puedes borrar desde el indice 0 al " + (ArregloDinamico.size()-1));
                 System.out.print("Digite el indice que desea eliminar: ");
-                indice = opcion.nextInt();
+                indice = sc.nextInt();
                 ArregloDinamico.remove(indice);
             }
             System.out.println();

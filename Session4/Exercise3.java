@@ -5,7 +5,7 @@ public class Exercise3 {
 
     public static void main(String[] args) {
         LinkedList <Integer> ListaEnlazada = new LinkedList<>();
-        Scanner leer = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         Random random = new Random();
         
         int BuscarDato = 0;
@@ -17,7 +17,7 @@ public class Exercise3 {
 
         System.out.println("Acabamos de generar una Lista Enlazada con 10 números aleatorios entre 1 y 20.");
         System.out.print("Digite un número y verificaremos si se encuentra en la lista generada: ");
-        BuscarDato = leer.nextInt();
+        BuscarDato = sc.nextInt();
 
         for (int j = 0; j < ListaEnlazada.size(); j++) {
             if (BuscarDato == ListaEnlazada.get(j)) {
