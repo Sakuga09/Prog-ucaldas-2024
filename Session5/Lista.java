@@ -4,7 +4,7 @@ public class Lista {
     String NombreEncargado;
     String Estado;
 
-    public Lista(String NombreTarea_param, String Duracion_param, String NombreEncargado_param, String Estado_param) {
+    public Lista(String NombreTarea_param, String Duracion_param, String NombreEncargado_param, String Estado_param) { 
         this.NombreTarea = NombreTarea_param;
         this.Duracion = Duracion_param;
         this.NombreEncargado = NombreEncargado_param;

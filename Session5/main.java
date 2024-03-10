@@ -8,9 +8,9 @@ public class main {
         Scanner scs2 = new Scanner(System.in);
         int auxiliar = 0;
 
+        InstanciaTareas.DigitarInformacion();
+        
         while (auxiliar == 0) {
-            InstanciaTareas.DigitarInformacion();
-
             System.out.println("Lista de tareas actual: ");
             InstanciaTareas.ListaDeTareas();
 
