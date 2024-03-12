@@ -1,8 +1,8 @@
 public class Lista {
-    String NombreTarea;
-    String Duracion;
-    String NombreEncargado;
-    String Estado;
+    public String NombreTarea;
+    public String Duracion;
+    public String NombreEncargado;
+    public String Estado;
 
     public Lista(String NombreTarea_param, String Duracion_param, String NombreEncargado_param, String Estado_param) { 
         this.NombreTarea = NombreTarea_param;

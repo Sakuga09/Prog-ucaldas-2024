@@ -49,7 +49,7 @@ public class tareas {
         System.out.println("Digite el Nuevo estado segun las siguiente opciones\nActiva\nEn desarrollo\nRealizada");
         String cambio = sc.nextLine();
         if (cambio.toLowerCase() == "activo" || cambio.toLowerCase() == "en desarrollo" || cambio.toLowerCase() == "realizada") {
-
+            String parametro = tareas.get(posicion-1).Estado;
         }
         else {
             System.out.println("Esa opción no puede realizarce, intente nuevamente");
