@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class tareas {
     ArrayList <Lista> tareas = new ArrayList<Lista>();
     Scanner sc = new Scanner(System.in);
+    Scanner scc = new Scanner(System.in);
 
     //Rellenar lista de tareas
     public void DigitarInformacion() {
@@ -17,8 +18,8 @@ public class tareas {
             System.out.print("Digite el nombre del encargado de la tarea " + i + ": ");
             String NombreEncargado =sc.nextLine();
 
-            System.out.print("Digite el estado de la tarea " + i + " Segun las siguientes opciones\nActiva\nEn desarrollo\nRealizada\nDigite su opción: ");
-            String Estado = sc.nextLine();
+            System.out.print("Digite el número del estado de la tarea " + i + " Segun las siguientes opciones\n1. Activa\n2. En desarrollo\n3. Realizada\nDigite su opción: ");
+            int Estado = scc.nextInt();
 
             tareas.add(new Lista(NombreTarea, Duracion, NombreEncargado, Estado));
             System.out.println();
@@ -27,8 +28,9 @@ public class tareas {
 
     //Mostrar lista de tareas
     public void ListaDeTareas() {
-        for(int j = 0; j < 5; j++) {
-            System.out.println("Tarea " + (j+1) + ": " + tareas.get(j));
+        for(int j = 0; j < tareas.size(); j++) {
+            System.out.print("Tarea " + (j+1) + ": ");
+            System.out.println(tareas.get(j).NombreTarea + " " + tareas.get(j).Duracion + " " + tareas.get(j).NombreEncargado + " " + tareas.get(j).Estado);
         }
     }
     
@@ -44,12 +46,13 @@ public class tareas {
 
     }
 
-    //Realizar el cambio de estado
+
     public void CambioEstado(int posicion) {
-        System.out.println("Digite el Nuevo estado segun las siguiente opciones\nActiva\nEn desarrollo\nRealizada");
-        String cambio = sc.nextLine();
-        if (cambio.toLowerCase() == "activo" || cambio.toLowerCase() == "en desarrollo" || cambio.toLowerCase() == "realizada") {
-            String parametro = tareas.get(posicion-1).Estado;
+        int indice = posicion-1;
+        System.out.println("Digite el número del uevo estado segun las siguiente opciones\n1. Activa\n2. En desarrollo\n3. Realizada");
+        int cambio = scc.nextInt();
+        if (cambio != 1 || cambio != 2 || cambio != 3) {
+           int parametro = tareas.get(indice).Estado;
         }
         else {
             System.out.println("Esa opción no puede realizarce, intente nuevamente");

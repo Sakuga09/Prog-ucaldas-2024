@@ -2,9 +2,9 @@ public class Lista {
     public String NombreTarea;
     public String Duracion;
     public String NombreEncargado;
-    public String Estado;
+    public int Estado;
 
-    public Lista(String NombreTarea_param, String Duracion_param, String NombreEncargado_param, String Estado_param) { 
+    public Lista(String NombreTarea_param, String Duracion_param, String NombreEncargado_param, int Estado_param) { 
         this.NombreTarea = NombreTarea_param;
         this.Duracion = Duracion_param;
         this.NombreEncargado = NombreEncargado_param;
@@ -23,10 +23,10 @@ public class Lista {
         return NombreEncargado;
     }
     
-    public String getEstado() {
+    public int getEstado() {
         return Estado;
     }
-    public void setEstado(String Estado) {
+    public void setEstado(int Estado) {
         this.Estado = Estado;
     }
 
